@@ -45,7 +45,6 @@ MAX_JOBS=4 pip install flash-attn --no-build-isolation
 克隆并以可编辑模式安装推理套件：
 
 ```bash
-# 请将下方链接替换为你的实际推理仓库地址
 git clone https://github.com/MiliLab/Omni-I2C.git
 cd VLMEvalKit_infer
 pip install -e .
