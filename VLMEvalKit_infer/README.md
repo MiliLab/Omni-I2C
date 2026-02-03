@@ -17,7 +17,7 @@ pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https
 
 ```
 
-### 2. 编译安装 Flash-Attn 2
+### 2. 编译安装 Flash-Attn 2 版本：2.8.3
 
 针对不同架构，你可以选择常规安装或针对 **sm120 (Blackwell)** 架构的优化编译。
 
