@@ -3,27 +3,33 @@
 # 初始化 Conda（这句很关键）
 eval "$(conda shell.bash hook)"
 
-cd /home/zhoujiawei/VLMEvalKit/VLMEvalKit
+# 指定运行文件夹
+# cd <Your folder>/VLMEvalKit_infer
 
-conda activate image2code
+conda activate omni_i2c
 
-# python run.py --data Image2Code_Html --model Claude4.5_Sonnet --verbose --reuse 
 python run.py --data Image2Code_Full --model Claude4.5_Sonnet --verbose --reuse 
 
-# 打印一下环境信息，方便排查
-echo "Job ID: $SLURM_JOB_ID"
-echo "Node: $SLURM_NODELIST"
-echo "GPUs: $CUDA_VISIBLE_DEVICES"
-nvidia-smi
+python run.py --data Image2Code_Full --model Gemini2_5_Pro --verbose --reuse 
 
-# ------------------------------------------------------------------
-# 【核心修改】
-# 1. 去掉了 MASTER_PORT 和 torchrun
-# 2. 直接使用 python 运行
-# 3. 确保你的 config.py 里已经配置了 use_lmdeploy=True 和 tp=4
-# ------------------------------------------------------------------
+python run.py --data Image2Code_Full --model Gemini3_Pro --verbose --reuse 
 
-python run.py \
-    --data Image2Code_Full_2_1 \
-    --model InternVL3_5-38B-Instruct \
-    --verbose
+python run.py --data Image2Code_Full --model GPT_5_1 --verbose --reuse 
+
+python run.py --data Image2Code_Full --model InternVL3_5_241B_A28B--verbose --reuse 
+
+python run.py --data Image2Code_Full --model InternVL3_5-38B-Instruct --verbose --reuse 
+
+python run.py --data Image2Code_Full --model InternVL3_5-8B-Instruct --verbose --reuse 
+
+python run.py --data Image2Code_Full --model Qwen3-VL-235b-a22b-Instruct --verbose --reuse 
+
+python run.py --data Image2Code_Full --model Qwen3-VL-32B-Instruct --verbose --reuse 
+
+python run.py --data Image2Code_Full --model Qwen3-VL-8B-Instruct --verbose --reuse 
+
+python run.py --data Image2Code_Full --model Qwen2.5-VL-72B-Instruct --verbose --reuse 
+
+python run.py --data Image2Code_Full --model Qwen2.5-VL-7B-Instruct --verbose --reuse 
+
+python run.py --data Image2Code_Full --model Gemma3-27B-Instruct --verbose --reuse 

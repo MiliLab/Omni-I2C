@@ -137,6 +137,7 @@ class Qwen3VLChat(Qwen3VLPromptMixin, BaseModel):
                 limit_mm = {"image": self.limit_mm_per_prompt}
             self.llm = LLM(
                 model=self.model_path,
+                max_model_len=65536,
                 max_num_seqs=8,
                 limit_mm_per_prompt=limit_mm,
                 tensor_parallel_size=tp_size,

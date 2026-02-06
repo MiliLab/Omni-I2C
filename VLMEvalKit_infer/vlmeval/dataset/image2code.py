@@ -15,8 +15,7 @@ class Image2Code(ImageBaseDataset):
     
     # 你的数据路径配置
     DATASET_URL = {
-        'Image2Code_Full': '/home/zhoujiawei/LMUData/Image2Code_Full.tsv',
-        'Image2Code_Html_Svg': '/home/zhoujiawei/LMUData/image2code_html_svg.tsv'
+        'Image2Code_Full': '<Your folder>/Image2Code_Full.tsv',
     }
 
     def build_prompt(self, line):
