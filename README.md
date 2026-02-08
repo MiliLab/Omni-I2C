@@ -206,6 +206,73 @@ tar -xzvf gt_data.tar.gz
 
 ### 4. Infering & Evaluation
 
+#### 4.1 Inference
+The inference process is based on **VLMEvalKit_infer**.
+
+1.  **Configuration**: Modify `Omni-I2C/VLMEvalKit_infer/vlmeval/config.py` to select the models you want to test. For a detailed configuration tutorial, please refer to the [VLMEvalKit Quickstart](https://github.com/open-compass/VLMEvalKit/blob/main/docs/zh-CN/Quickstart.md).
+2.  **Execution**: Run the example script.
+
+```bash
+cd Omni-I2C/VLMEvalKit_infer
+bash run_example.sh
+
+```
+
+> **Note:** The inference results will be saved in `Omni-I2C/VLMEvalKit_infer/output`.
+
+#### 4.2 Evaluation
+
+After inference, you need to move the result files to the evaluation pipeline.
+
+1. **Preparation**: Create an `infer` folder inside `eval_pipeline` and move your inference results there.
+2. **API Configuration**: Open `Omni-I2C/eval_pipeline/pipeline_config.py` and configure the necessary API keys for evaluation.
+3. **Execution**: Run the main evaluation script.
+
+```bash
+cd Omni-I2C/eval_pipeline
+mkdir -p infer
+
+# [Important] Move your inference results from VLMEvalKit_infer/output into ./infer
+# cp ../VLMEvalKit_infer/output/your_result.json ./infer/
+
+bash run_main.sh
+
+```
+
+**Evaluation Results:**
+
+* **Final Report:** Located in `Omni-I2C/eval_pipeline/output`.
+* **Intermediate Checkpoints:** Located inside each model's folder in the working directory:
+* `step1_checkpoint.jsonl`: Render results.
+* `step2_checkpoint.jsonl`: Code-level evaluation results.
+* `step3_checkpoint.jsonl`: Image-level evaluation results.
+
+
+
+<details>
+<summary>ℹ️ Evaluation Pipeline Details (Click to expand)</summary>
+
+The evaluation pipeline consists of three main steps managed by `main_pipeline.py`.
+
+**File Structure & Functionality:**
+
+```text
+eval_pipeline
+├── eval_image_prompt.py  # Prompts for Image-level evaluation
+├── eval_prompts.py       # Prompts for Code-level evaluation
+├── gt_data               # Ground Truth data (e.g., gt_data.tar.gz)
+├── libs                  # Libraries for HTML rendering (echarts, jquery)
+├── main_pipeline.py      # Main entry point for evaluation
+├── pipeline_config.py    # Configuration file (Set API keys here)
+├── run_main.sh           # Execution script
+├── step1_execute.py      # Step 1: Render inference code to images
+├── step2_evaluate.py     # Step 2: Code-level evaluation
+└── step3_evaluate.py     # Step 3: Image-level evaluation
+
+```
+
+</details>
+
 
 ## :white_check_mark: TODO
 - [x] Release the [Online Demo](http://47.115.200.157:7861).

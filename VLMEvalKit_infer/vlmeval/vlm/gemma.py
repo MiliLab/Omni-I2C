@@ -106,7 +106,7 @@ class Gemma3(BaseModel):
         self.system_prompt = kwargs.pop('system_prompt', 'You are a helpful assistant. ')
         default_kwargs = {
             'do_sample': False,
-            'max_new_tokens': 4096
+            'max_new_tokens': 16384
         }
         default_kwargs.update(kwargs)
         self.kwargs = default_kwargs

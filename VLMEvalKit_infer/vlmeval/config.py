@@ -17,6 +17,131 @@ RBDash_ROOT = None
 VITA_ROOT = None
 LLAVA_V1_7B_MODEL_PTH = "Please set your local path to LLaVA-7B-v1.1 here, the model weight is obtained by merging LLaVA delta weight based on vicuna-7b-v1.1 in https://github.com/haotian-liu/LLaVA/blob/main/docs/MODEL_ZOO.md with vicuna-7b-v1.1. "
 
+omni_i2c = {
+    # api 
+    "gpt-5.1": partial(
+        GPT4V,
+        model="gpt-5.1",
+        temperature=0, 
+        img_detail="high",
+        retry=10,
+        verbose=False,
+        max_tokens=16384,
+        timeout=1800,
+    ),
+    "Gemini2.5-Pro": partial(
+        GPT4V,
+        model="gemini-2.5-pro", 
+        temperature=0, 
+        retry=10,
+        max_tokens=16384,
+        verbose=False,
+        timeout=1800
+    ),
+    "Gemini3-Pro": partial(
+        GPT4V,
+        model="gemini-3-pro", 
+        temperature=0, 
+        retry=10,
+        max_tokens=16384,
+        verbose=False,
+        timeout=1800
+    ),
+    "Claude4.5_Sonnet": partial(
+        GPT4V,
+        model="claude-sonnet-4-5-20250929",
+        temperature=0,
+        max_tokens=16384,
+        retry=10,
+        verbose=False,
+        timeout=1800
+    ),
+    "Qwen3-VL-235B-A22B-Instruct": partial(
+        GPT4V,
+        model="qwen/qwen3-vl-235b-a22b-instruct",
+        temperature=0,
+        max_tokens=16384,
+        retry=5,
+        verbose=False,
+        timeout=1800
+    ),
+    "InternVL3_5-241B-A28B": partial(
+        GPT4V,
+        model="internvl3.5-241b-a28b",
+        temperature=0,
+        max_tokens=16384,
+        retry=5,
+        verbose=False,
+        timeout=1800
+    ),
+
+    # model
+    "InternVL3_5-38B-Instruct": partial(
+        InternVLChat, 
+        model_path="OpenGVLab/InternVL3_5-38B",
+        version="V2.0",
+        repetition_penalty=1.1,
+        max_new_tokens=16384,
+        use_lmdeploy=True
+    ),
+    "InternVL3_5-8B": partial(
+        InternVLChat, 
+        model_path="OpenGVLab/InternVL3_5-8B",
+        version="V2.0",
+        repetition_penalty=1.1,
+        max_new_tokens=16384
+    ),
+    "Qwen3-VL-32B-Instruct": partial(
+        Qwen3VLChat,
+        model_path="Qwen/Qwen3-VL-32B-Instruct",
+        use_custom_prompt=False,
+        use_vllm=True,
+        temperature=0.7, 
+        max_new_tokens=16384,
+        repetition_penalty=1.0,
+        presence_penalty=1.5,
+        top_p=0.8,
+        top_k=20
+    ),
+    "Qwen3-VL-8B-Instruct": partial(
+        Qwen3VLChat,
+        model_path="Qwen/Qwen3-VL-8B-Instruct",
+        use_custom_prompt=False,
+        use_vllm=True,
+        temperature=0.7, 
+        max_new_tokens=16384,
+        repetition_penalty=1.0,
+        presence_penalty=1.5,
+        top_p=0.8,
+        top_k=20
+    ),
+    "Qwen2.5-VL-72B-Instruct": partial(
+        Qwen2VLChat,
+        model_path="Qwen/Qwen2.5-VL-72B-Instruct",
+        min_pixels=1280 * 28 * 28,
+        max_pixels=16384 * 28 * 28,
+        use_custom_prompt=False,
+        max_new_tokens=16384,
+        use_vllm=True
+    ),
+    "Qwen2.5-VL-7B-Instruct": partial(
+        Qwen2VLChat,
+        model_path="Qwen/Qwen2.5-VL-7B-Instruct",
+        min_pixels=1280 * 28 * 28,
+        max_pixels=16384 * 28 * 28,
+        use_custom_prompt=False,
+        max_new_tokens=16384,
+    ),
+    "Gemma3-27B": partial(
+        Gemma3,
+        model_path="google/gemma-3-27b-it",
+        use_vllm=True,
+        max_new_tokens=16384,
+    ),
+}
+
+
+
 video_models = {
     "Video-LLaVA-7B": partial(VideoLLaVA, model_path="LanguageBind/Video-LLaVA-7B"),
     "Video-LLaVA-7B-HF": partial(
@@ -283,10 +408,10 @@ api_models = {
         GPT4V,
         model="gpt-5.1-2025-11-13",
         img_detail="high",
-        retry=3,
+        retry=10,
         verbose=False,
-        max_tokens=2**14,
-        timeout=300,
+        max_tokens=16384,
+        timeout=1800,
     ),
     # Gemini
     "GeminiPro1-0": partial(
@@ -316,7 +441,27 @@ api_models = {
     "GeminiPro2-5": partial(
         Gemini, model="gemini-2.5-pro", temperature=0, retry=10
     ),
+    "Gemini2.5-Pro": partial(
+        GPT4V,
+        model="gemini-2.5-pro", 
+        temperature=0, 
+        retry=10,
+        max_tokens=16384,
+        verbose=False,
+        timeout=1800
+    ),
+    "Gemini3-Pro": partial(
+        GPT4V,
+        model="gemini-3-pro", 
+        temperature=0, 
+        retry=10,
+        max_tokens=16384,
+        verbose=False,
+        timeout=1800
+    ),
     
+
+
     # Qwen-VL
     "QwenVLPlus": partial(QwenVLAPI, model="qwen-vl-plus", temperature=0, retry=10),
     "QwenVLMax": partial(QwenVLAPI, model="qwen-vl-max", temperature=0, retry=10),
@@ -1835,7 +1980,14 @@ gemma_series = {
 
     'Gemma3-4B': partial(Gemma3, model_path='google/gemma-3-4b-it'),
     'Gemma3-12B': partial(Gemma3, model_path='google/gemma-3-12b-it'),
-    'Gemma3-27B': partial(Gemma3, model_path='google/gemma-3-27b-it')
+    'Gemma3-27B': partial(Gemma3,
+                        model_path='/opt/zhoujiawei/google/gemma-3-27b-it',
+                        use_vllm=True,
+                        # use_vllm=False,
+                        max_new_tokens=16384,
+                        #    model_path='google/gemma-3-27b-it'
+
+                           )
 }
 
 aguvis_series = {
@@ -2008,7 +2160,7 @@ model_groups = [
     long_vita_series, ristretto_series, kimi_series, aguvis_series, hawkvl_series,
     flash_vl, kimi_vllm_series, oryx_series, treevgr_series, varco_vision_series, qtunevl_series, 
     xvl_series, thyme_series, logics_series, cosmos_series, keye_series, qianfanvl_series, 
-    lfm2vl_series, rbdashmm_api_series_lmdeploy, interns1_series, insight_v_series
+    lfm2vl_series, rbdashmm_api_series_lmdeploy, interns1_series, insight_v_series, omni_i2c
 ]
 
 for grp in model_groups:
