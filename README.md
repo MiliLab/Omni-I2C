@@ -109,7 +109,7 @@ We provide a detailed installation guide to create an environment for **Omni-I2C
 
 ```bash
 # 1. Clone Omni-I2C
-git clone [https://github.com/MiliLab/Omni-I2C.git](https://github.com/MiliLab/Omni-I2C.git)
+git clone https://github.com/MiliLab/Omni-I2C.git
 cd Omni-I2C/VLMEvalKit_infer
 
 # 2. Create conda environment (Python 3.10.18 recommended)
@@ -118,17 +118,18 @@ conda activate omni_i2c
 
 # 3. Install PyTorch & CUDA
 # We recommend CUDA 12.8 for best driver support on next-gen hardware (e.g., RTX 5090).
-pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url [https://download.pytorch.org/whl/cu128](https://download.pytorch.org/whl/cu128)
+pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 \
+  --index-url https://download.pytorch.org/whl/cu128
 
 # 4. Install Flash-Attention 2 (v2.8.3)
-git clone -b v2.8.3 [https://github.com/Dao-AILab/flash-attention.git](https://github.com/Dao-AILab/flash-attention.git)
+git clone -b v2.8.3 https://github.com/Dao-AILab/flash-attention.git
 cd flash-attention
 
 # [Option A] Standard installation
 MAX_JOBS=4 pip install flash-attn --no-build-isolation
 
 # [Option B] Optimized for Blackwell Architecture (Recommended for RTX 5090)
-# export TORCH_CUDA_ARCH_LIST="12.0" 
+# export TORCH_CUDA_ARCH_LIST="12.0"
 # MAX_JOBS=4 pip install flash-attn --no-build-isolation
 
 cd .. # return to VLMEvalKit_infer directory
@@ -138,7 +139,8 @@ pip install -e .
 
 # Install Acceleration Backend (Choose one)
 # [LMDeploy]
-pip install [https://github.com/InternLM/lmdeploy/releases/download/v0.11.1/lmdeploy-0.11.1+cu128-cp310-cp310-manylinux2014_x86_64.whl](https://github.com/InternLM/lmdeploy/releases/download/v0.11.1/lmdeploy-0.11.1+cu128-cp310-cp310-manylinux2014_x86_64.whl) --extra-index-url [https://download.pytorch.org/whl/cu128](https://download.pytorch.org/whl/cu128)
+pip install https://github.com/InternLM/lmdeploy/releases/download/v0.11.1/lmdeploy-0.11.1+cu128-cp310-cp310-manylinux2014_x86_64.whl \
+  --extra-index-url https://download.pytorch.org/whl/cu128
 
 # [vLLM]
 uv pip install vllm==0.11.0
@@ -154,18 +156,23 @@ pip install -r requirements.txt
 sudo apt-get update
 
 # Install LaTeX environment (Required for TikZ & standalone)
-sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-pictures texlive-fonts-recommended
+sudo apt-get install -y \
+  texlive-latex-base \
+  texlive-latex-extra \
+  texlive-pictures \
+  texlive-fonts-recommended
 
 # Install PDF to Image tools (Required for pdftocairo)
 sudo apt-get install -y poppler-utils
 
-# Install the Google Noto font package (covering Chinese, Japanese, Korean, Arabic, Russian, etc.)
+# Install the Google Noto font package
 sudo apt-get install -y fonts-noto fonts-noto-cjk fonts-noto-color-emoji
 
 # --- Playwright Setup ---
 # Install Chromium and system dependencies
 playwright install chromium
 playwright install-deps
+
 ```
 
 </details>
