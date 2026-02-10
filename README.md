@@ -2,13 +2,12 @@
 <h1>Omni-I2C</h1>
 <h3>A Holistic Benchmark for High-Fidelity Image-to-Code Generation</h3>
 
-[Hao Wang](https://wanghao9610.github.io)<sup>1,2</sup>,[Limeng Qiao](https://scholar.google.com/citations?user=3PFZAg0AAAAJ&hl=en)<sup>3</sup>,[Zequn Jie](https://scholar.google.com/citations?user=4sKGNB0AAAAJ&hl)<sup>3</sup>, [Zhijian Huang](https://zhijian11.github.io/)<sup>1</sup>, [Chengjian Feng](https://fcjian.github.io/)<sup>3</sup>, 
+[Jiawei Zhou](https://openreview.net/profile?id=~Jiawei_Zhou8)<sup>1</sup>,[Chi Zhang](https://openreview.net/profile?id=~Chi_Zhang28)<sup>1</sup>,[Xiang Feng](https://openreview.net/profile?id=~Xiang_Feng4)<sup>1</sup>, [Qiming Zhang](https://openreview.net/profile?id=~Qiming_Zhang1)<sup>2</sup>, [Haibo Qiu](https://openreview.net/profile?id=~Haibo_Qiu1)<sup>3</sup>, 
 
-[Qingfang Zheng](https://openreview.net/profile?id=%7EZheng_Qingfang1)<sup>2</sup>, [Lin Ma](https://forestlinma.com/)<sup>3</sup>, [Xiangyuan Lan](https://scholar.google.com/citations?user=c3iwWRcAAAAJ&hl)<sup>2</sup><sup>:email:</sup>, [Xiaodan Liang](https://scholar.google.com/citations?user=voxznZAAAAAJ&hl)<sup>1</sup><sup>:email:</sup>
+[Lihuo He](https://openreview.net/profile?id=~Lihuo_He1)<sup>3</sup>, [Dengpan Ye](https://openreview.net/profile?id=~Dengpan_Ye1)<sup>4</sup>, [Xinbo Gao](https://openreview.net/profile?id=~Xinbo_Gao3)<sup>3</sup>, [Jing Zhang](https://openreview.net/profile?id=~Jing_Zhang17)<sup>1</sup>
 
-<sup>1</sup> Sun Yat-sen University, <sup>2</sup> Peng Cheng Laboratory, <sup>3</sup> Meituan Inc.
+<sup>1</sup> Wuhan University, <sup>2</sup> University of Sydney, <sup>3</sup> School of Electronic Engineering, Xidian University. <sup>4</sup> Guangzhou University
 
-<sup>:email:</sup> Corresponding author
 </div>
 
 <div align="center" style="display: flex; justify-content: center; align-items: center;">
