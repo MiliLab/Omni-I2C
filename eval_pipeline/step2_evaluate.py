@@ -216,7 +216,8 @@ def call_deepseek_with_validation(prompt, idx, gt_n_logic=None, gt_n_var=None, m
                 model=EVAL_MODEL,
                 temperature=temp,
                 messages=[{"role": "user", "content": prompt}],
-                timeout=120, 
+                extra_body={"enable_thinking": True},
+                timeout=180, 
                 max_tokens=4096
             )
             text = completion.choices[0].message.content
