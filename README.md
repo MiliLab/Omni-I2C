@@ -31,7 +31,7 @@
   </a>
 </div>
 
-## :eyes: Notice
+<!-- ## :eyes: Notice -->
 
 
 
@@ -101,7 +101,7 @@ Omni-I2C
 </details>
 
 ### 2. Installation
-We provide a detailed installation guide to create an environment for **Omni-I2C**. Please refer to the following steps to set up the environment, especially for next-gen hardware support (e.g., RTX 5090).
+We provide a detailed installation guide to create an environment for **Omni-I2C**. Please refer to the following steps to set up the environment, especially for next-gen hardware support (e.g., RTX 5090). If you use a machine with the Blackwell architecture for reasoning, you will need to upgrade the versions of torch(>=2.9.1) and vllm(>=0.12.0).
 
 <details open>
 <summary>⚙️ Installation (Click to collapse)</summary>
@@ -280,7 +280,7 @@ eval_pipeline
 </details>
 
 
-## :white_check_mark: TODO
+<!-- ## :white_check_mark: TODO
 - [x] Release the [Online Demo](http://47.115.200.157:7861).
 - [x] Release the [Model Weights](https://huggingface.co/hao9610/X-SAM).
 - [x] Release the [Technical Report](https://arxiv.org/abs/2508.04655).
@@ -307,7 +307,7 @@ If you find X-SAM is helpful for your research or applications, please consider 
   journal={arXiv preprint arXiv:2508.04655},
   year={2025}
 }
-```
+``` -->
 
 <!-- ## :star2: Star History
 
