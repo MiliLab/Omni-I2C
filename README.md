@@ -10,7 +10,7 @@
 
 </div>
 
-<div align="center" style="display: flex; justify-content: center; align-items: center;">
+<!-- <div align="center" style="display: flex; justify-content: center; align-items: center;">
   <a href="https://arxiv.org/abs/2508.04655" style="margin: 0 2px;">
     <img src='https://img.shields.io/badge/arXiv-2508.04655-red?style=flat&logo=arXiv&logoColor=red' alt='arxiv'>
   </a>
@@ -29,7 +29,7 @@
   <a href='https://wanghao9610.github.io/X-SAM/' style="margin: 0 2px;">
     <img src='https://img.shields.io/badge/🌐_Project-Webpage-green?style=flat&logoColor=white' alt='webpage'>
   </a>
-</div>
+</div> -->
 
 <!-- ## :eyes: Notice -->
 
