@@ -2,11 +2,13 @@
 <h1>Omni-I2C</h1>
 <h3>A Holistic Benchmark for High-Fidelity Image-to-Code Generation</h3>
 
-[Jiawei Zhou](https://openreview.net/profile?id=~Jiawei_Zhou8)<sup>1</sup>,[Chi Zhang](https://openreview.net/profile?id=~Chi_Zhang28)<sup>1</sup>,[Xiang Feng](https://openreview.net/profile?id=~Xiang_Feng4)<sup>1</sup>, [Qiming Zhang](https://openreview.net/profile?id=~Qiming_Zhang1)<sup>2</sup>, [Haibo Qiu](https://openreview.net/profile?id=~Haibo_Qiu1)<sup>3</sup>, 
+[Jiawei Zhou](https://openreview.net/profile?id=~Jiawei_Zhou8)<sup>1, *</sup>, [Chi Zhang](https://openreview.net/profile?id=~Chi_Zhang28)<sup>1, *</sup>, [Xiang Feng](https://openreview.net/profile?id=~Xiang_Feng4)<sup>1</sup>, [Qiming Zhang](https://openreview.net/profile?id=~Qiming_Zhang1)<sup>2</sup>, [Haibo Qiu](https://openreview.net/profile?id=~Haibo_Qiu1)<sup>3</sup>,
 
-[Lihuo He](https://openreview.net/profile?id=~Lihuo_He1)<sup>3</sup>, [Dengpan Ye](https://openreview.net/profile?id=~Dengpan_Ye1)<sup>4</sup>, [Xinbo Gao](https://openreview.net/profile?id=~Xinbo_Gao3)<sup>3</sup>, [Jing Zhang](https://openreview.net/profile?id=~Jing_Zhang17)<sup>1</sup>
+[Lihuo He](https://openreview.net/profile?id=~Lihuo_He1)<sup>4,†</sup>, [Dengpan Ye](https://openreview.net/profile?id=~Dengpan_Ye1)<sup>5,†</sup>, [Xinbo Gao](https://openreview.net/profile?id=~Xinbo_Gao3)<sup>4</sup>, [Jing Zhang](https://openreview.net/profile?id=~Jing_Zhang17)<sup>1,†</sup>
 
-<sup>1</sup> Wuhan University, <sup>2</sup> University of Sydney, <sup>3</sup> School of Electronic Engineering, Xidian University. <sup>4</sup> Guangzhou University
+<sup>1</sup> Wuhan University, Wuhan, China, <sup>2</sup> Independent Researcher, China, <sup>3</sup> Meituan Inc, <sup>4</sup> Xidian University, Xi'an, China, <sup>5</sup> Guangzhou University, Guangzhou, China
+
+<sup>†</sup> Corresponding author: jingzhang.cv@gmail.com, lhhe@mail.xidian.edu.cn, yedp@gzhu.edu.cn
 
 </div>
 
@@ -42,7 +44,7 @@
 ## :rocket: Introduction
 Through an extensive evaluation of 13 proprietary and open-weight LMMs, we reveal a profound performance gap in high-fidelity image-to-code generation. Even leading frontier models, such as Gemini 3 Pro and GPT-5.1, frequently falter in the challenging scenarios presented by our benchmark. These results highlight substantial room for improvement and position Omni-I2C as a challenging benchmark for advancing LMMs. Our contributions are summarized as follows:
 
-- We present **Omni-I2C**, a meticulously curated dataset of 1.1k items, including 5 programming languages, 8 major subjects, and 43 distinct figure types. It serves as a rigorous testbed for evaluating the perception and coding capabilities of LMMs.
+- We present **Omni-I2C**, a meticulously curated dataset of 1080 items, including 5 programming languages, 8 major subjects, and 45 distinct figure types. It serves as a rigorous testbed for evaluating the perception and coding capabilities of LMMs.
 - We propose an evaluation framework that assesses code-level integrity and image-level perceptual consistency, enabling more diagnostic and attributable analyses of model behavior than traditional heuristic metrics.
 - Our comprehensive analysis of SOTA LMMs exposes a significant performance gap in high-fidelity reconstruction, identifying critical failure modes and charting a path toward more precise, trusted multimodal agents.
 
@@ -61,7 +63,7 @@ Omni-I2C features 1.1k meticulously curated samples, defined by its breadth acro
 
 ## :bar_chart: Benchmarks
 
-Please refer to the [Benchmark Results](docs/benchmark_results.md) for more details.
+Please refer to the [Benchmark Results](doc/images/benchmark_results.png) for more details.
 
 ### 1. Structure
 We provide a detailed project structure for Omni-I2C. This project consists of two main components: **VLMEvalKit_infer**, which is adapted from VLMEvalKit for inference, and **eval_pipeline**, designed for the evaluation process. Please follow this structure to organize the project.
@@ -185,7 +187,7 @@ VLMEvalkit is built upon the [OpenCompass VLMEvalKit](https://github.com/open-co
 The datas that need to be prepared are the inference data and the ground truth data for evaluation.
 
 #### Inference Data
-First, download the inference data from [Link](xxx). After downloading, you need to update the file path in the configuration:
+First, download the inference data from [Link](https://huggingface.co/datasets/MiliLab/Omni-I2C). After downloading, you need to update the file path in the configuration:
 
 1. Open `Omni-I2C/VLMEvalKit_infer/vlmeval/dataset/image2code.py`.
 2. Locate **line 18** and replace the default path `Image2Code_Full.tsv` with your actual local path.
