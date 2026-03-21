@@ -2,36 +2,28 @@
 <h1>Omni-I2C</h1>
 <h3>A Holistic Benchmark for High-Fidelity Image-to-Code Generation</h3>
 
-[Jiawei Zhou](https://openreview.net/profile?id=~Jiawei_Zhou8)<sup>1, *</sup>, [Chi Zhang](https://openreview.net/profile?id=~Chi_Zhang28)<sup>1, *</sup>, [Xiang Feng](https://openreview.net/profile?id=~Xiang_Feng4)<sup>1</sup>, [Qiming Zhang](https://openreview.net/profile?id=~Qiming_Zhang1)<sup>2</sup>, [Haibo Qiu](https://openreview.net/profile?id=~Haibo_Qiu1)<sup>3</sup>,
+[Jiawei Zhou](https://openreview.net/profile?id=~Jiawei_Zhou8)<sup>1, *</sup>, [Chi Zhang](https://openreview.net/profile?id=~Chi_Zhang28)<sup>1, *</sup>, [Xiang Feng](https://openreview.net/profile?id=~Xiang_Feng4)<sup>1</sup>, [Qiming Zhang](https://openreview.net/profile?id=~Qiming_Zhang1)<sup>2</sup>, [Haibo Qiu](https://openreview.net/profile?id=~Haibo_Qiu1)<sup>2</sup>,
 
-[Lihuo He](https://openreview.net/profile?id=~Lihuo_He1)<sup>4,†</sup>, [Dengpan Ye](https://openreview.net/profile?id=~Dengpan_Ye1)<sup>5,†</sup>, [Xinbo Gao](https://openreview.net/profile?id=~Xinbo_Gao3)<sup>4</sup>, [Jing Zhang](https://openreview.net/profile?id=~Jing_Zhang17)<sup>1,†</sup>
+[Lihuo He](https://openreview.net/profile?id=~Lihuo_He1)<sup>3,†</sup>, [Dengpan Ye](https://openreview.net/profile?id=~Dengpan_Ye1)<sup>4,†</sup>, [Xinbo Gao](https://openreview.net/profile?id=~Xinbo_Gao3)<sup>3</sup>, [Jing Zhang](https://openreview.net/profile?id=~Jing_Zhang17)<sup>1,†</sup>
 
-<sup>1</sup> Wuhan University, Wuhan, China, <sup>2</sup> Independent Researcher, China, <sup>3</sup> Meituan Inc, <sup>4</sup> Xidian University, Xi'an, China, <sup>5</sup> Guangzhou University, Guangzhou, China
+<sup>1</sup> Wuhan University, Wuhan, China, <sup>2</sup> Independent Researcher, China, <sup>3</sup> Xidian University, Xi'an, China, <sup>4</sup> Guangzhou University, Guangzhou, China
 
 <sup>†</sup> Corresponding author: jingzhang.cv@gmail.com, lhhe@mail.xidian.edu.cn, yedp@gzhu.edu.cn
 
 </div>
 
-<!-- <div align="center" style="display: flex; justify-content: center; align-items: center;">
-  <a href="https://arxiv.org/abs/2508.04655" style="margin: 0 2px;">
-    <img src='https://img.shields.io/badge/arXiv-2508.04655-red?style=flat&logo=arXiv&logoColor=red' alt='arxiv'>
+<div align="center" style="display: flex; justify-content: center; align-items: center;">
+  <a href="https://arxiv.org/abs/2603.17508" style="margin: 0 2px;">
+    <img src='https://img.shields.io/badge/arXiv-2603.17508-red?style=flat&logo=arXiv&logoColor=red' alt='arxiv'>
   </a>
-  <a href='https://huggingface.co/hao9610/X-SAM' style="margin: 0 2px;">
-    <img src='https://img.shields.io/badge/HuggingFace-ckpts-orange?style=flat&logo=HuggingFace&logoColor=orange' alt='huggingface'>
+  <a href='https://huggingface.co/datasets/MiliLab/Omni-I2C' style="margin: 0 2px;">
+    <img src='https://img.shields.io/badge/HuggingFace-datasets-yellow?style=flat&logo=HuggingFace&logoColor=yellow' alt='huggingface'>
   </a>
-  <a href="https://github.com/wanghao9610/X-SAM" style="margin: 0 2px;">
+  <a href="https://github.com/MiliLab/Omni-I2C" style="margin: 0 2px;">
     <img src='https://img.shields.io/badge/GitHub-Repo-blue?style=flat&logo=GitHub' alt='GitHub'>
   </a>
-  <a href="http://47.115.200.157:7861" style="margin: 0 2px;">
-    <img src='https://img.shields.io/badge/Demo-Gradio-gold?style=flat&logo=Gradio&logoColor=red' alt='Demo'>
-  </a>
-  <a href="http://121.43.252.12:7862" style="margin: 0 2px;">
-    <img src='https://img.shields.io/badge/Demo-Gradio-gold?style=flat&logo=Gradio&logoColor=red' alt='Demo'>
-  </a>
-  <a href='https://wanghao9610.github.io/X-SAM/' style="margin: 0 2px;">
-    <img src='https://img.shields.io/badge/🌐_Project-Webpage-green?style=flat&logoColor=white' alt='webpage'>
-  </a>
-</div> -->
+
+</div>
 
 <!-- ## :eyes: Notice -->
 
