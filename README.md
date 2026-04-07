@@ -31,7 +31,13 @@
 
 ## :boom: Updates
 
+## :boom: Updates
 
+**2026.04.06**
+- 🎉 Our paper *Omni-I2C* has been accepted to **ACL 2026**.
+
+**2026.03.18**
+- 📄 Our paper is now available on [arXiv](https://arxiv.org/abs/2603.17508).
 
 ## :rocket: Introduction
 Through an extensive evaluation of 13 proprietary and open-weight LMMs, we reveal a profound performance gap in high-fidelity image-to-code generation. Even leading frontier models, such as Gemini 3 Pro and GPT-5.1, frequently falter in the challenging scenarios presented by our benchmark. These results highlight substantial room for improvement and position Omni-I2C as a challenging benchmark for advancing LMMs. Our contributions are summarized as follows:
