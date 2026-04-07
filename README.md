@@ -31,8 +31,6 @@
 
 ## :boom: Updates
 
-## :boom: Updates
-
 **2026.04.06**
 - 🎉 Our paper *Omni-I2C* has been accepted to **ACL 2026**.
 
