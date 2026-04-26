@@ -200,7 +200,7 @@ First, download the inference data from [Link](https://huggingface.co/datasets/M
 
 #### Ground Truth Data
 
-The ground truth (GT) data is already included in the repository (`Omni-I2C/eval_pipeline/gt_data/gt_data.tar.gz`). Please unzip it before running the evaluation pipeline.
+The ground truth (GT) data and the checklist for code_level evaluation are already included in the repository (`Omni-I2C/eval_pipeline/gt_data/gt_data.tar.gz`). Please unzip it before running the evaluation pipeline.
 
 ```bash
 cd ./eval_pipeline/gt_data
